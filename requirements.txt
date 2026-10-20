@@ -1,0 +1,24 @@
+# Core UltraBot Pipeline & Streamlit Dashboard
+streamlit>=1.30.0
+torch>=2.0.0
+torchvision
+ultralytics>=8.3.0
+opencv-python>=4.9.0
+numpy>=1.26,<2.3
+scipy>=1.10
+pandas>=2.0.0
+plotly>=5.0.0
+matplotlib>=3.7
+Pillow>=10
+pyyaml>=6.0
+
+# 3D Robotic Simulation (ultrabot_sim)
+pybullet>=3.2.6
+pyrender==0.1.45
+trimesh>=4.0
+PyOpenGL>=3.1.0
+pyglet<2
+
+# Testing & Monitoring
+pytest>=7.0
+psutil>=5.9

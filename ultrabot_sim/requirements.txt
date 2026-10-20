@@ -1,0 +1,29 @@
+# UltraBot 3D robotic biopsy simulation (ultrabot_sim)
+#
+# Install torch FIRST from the CUDA index, or pip pulls the CPU build:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# (CPU only also works: pip install torch torchvision)
+# then, from the repository root:
+#   pip install -r requirements.txt -r ultrabot_sim/requirements.txt
+
+ultralytics>=8.3.0
+pybullet>=3.2.6
+opencv-python>=4.9.0
+numpy>=1.26,<2.3
+scipy>=1.10
+matplotlib>=3.7              # analyze.py
+Pillow>=10
+pyyaml>=6.0
+pytest>=7.0                  # ultrabot_sim/tests
+
+# Realistic 3D operating room (or_render.py). Optional: without these the
+# PyBullet renderer is used automatically.
+pyrender==0.1.45
+trimesh>=4.0
+PyOpenGL>=3.1.0              # 3.1.7+ needed on Python 3.12+ / numpy 2
+pyglet<2                     # pyrender's window / offscreen context
+
+# Optional
+psutil>=5.9                  # memory column in the performance report
+# vosk>=0.3.45               # voice commands (--voice), plus sounddevice and
+# sounddevice>=0.4.6         # the model in models/vosk-small-en/
